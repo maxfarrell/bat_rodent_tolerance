@@ -1,0 +1,92 @@
+"Virus_ICTV","SppName_ICTV_MSL2018b","Reservoir","Vector.borne","Reference_Reservoir","Reference_Vector","CFR_avg","human.trans","IsVectorBorne","GenomeType","ExclusiveCytoplasmicReplication"
+"Avian orthoavulavirus 1","Avian orthoavulavirus 1","Columbiformes","0","gogoi2017",NA,0,1,0,"ssRNA(-)",1
+"Avian orthoavulavirus 1","Avian orthoavulavirus 1","Galliformes","0","gogoi2017",NA,0,1,0,"ssRNA(-)",1
+"Avian orthoavulavirus 1","Avian orthoavulavirus 1","Suliformes","0","cross2013",NA,0,1,0,"ssRNA(-)",1
+"Banzi virus","Banzi virus","Orphan","1","Shope2003; weissenbock2010","Shope2003; weissenbock2010",0,1,1,"ssRNA(+)",1
+"Bundibugyo ebolavirus","Bundibugyo ebolavirus","Orphan","0","Babayan2018",NA,NA,NA,NA,NA,NA
+"Bunyamwera orthobunyavirus","Bunyamwera orthobunyavirus","Orphan","1","Babayan2018","Babayan2018",NA,NA,NA,NA,NA
+"Bwamba orthobunyavirus","Bwamba orthobunyavirus",NA,"1",NA,"Contigiani2017",NA,NA,NA,NA,NA
+"Chikungunya virus","Chikungunya virus","Human","1","Knipe2013","Babayan2018",0.06,4,1,"ssRNA(+)",1
+"Chikungunya virus","Chikungunya virus","NonHumanPrimate","1","Knipe2013","Babayan2018",0.06,4,1,"ssRNA(+)",1
+"Cocal vesiculovirus","Cocal vesiculovirus",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Colorado tick fever coltivirus","Colorado tick fever virus","Rodent","1","Emmons1988","Vasilakis2016",0,1,1,"dsRNA",1
+"Colorado tick fever coltivirus","Colorado tick fever virus","Rodent","1","Emmons1988","Vasilakis2016",1.333333333,1,1,"dsRNA",1
+"Dengue virus","Dengue virus","Human","1","Calisher2003","Babayan2018",0.115977246,4,1,"ssRNA(+)",1
+"Dengue virus","Dengue virus","NonHumanPrimate","1","Knipe2013","Babayan2018",0.115977246,4,1,"ssRNA(+)",1
+"Dobrava-Belgrade orthohantavirus","Dobrava-Belgrade orthohantavirus","Rodent","0","Babayan2018",NA,12,1,0,"ssRNA(-)",1
+"Eastern equine encephalitis virus","Eastern equine encephalitis virus","Passeriformes","1","arrigo2010","Babayan2018",33,1,1,"ssRNA(+)",1
+"Entebbe bat virus","Entebbe bat virus","Vespbat","?","Babayan2018","Babayan2018",NA,NA,NA,NA,NA
+"European bat 1 lyssavirus","European bat 1 lyssavirus","Vespbat","0","Babayan2018",NA,100,1,0,"ssRNA(-)",1
+"European bat 2 lyssavirus","European bat 2 lyssavirus","Vespbat","0","Babayan2018",NA,100,1,0,"ssRNA(-)",1
+"Foot-and-mouth disease virus","Foot-and-mouth disease virus","Artiodactyl","0","Babayan2018",NA,0,1,0,"ssRNA(+)",1
+"Ground squirrel hepatitis virus","Ground squirrel hepatitis virus","Rodent","0","Knipe2013",NA,NA,NA,NA,NA,NA
+"Hantaan orthohantavirus","Hantaan orthohantavirus","Rodent","0","Babayan2018",NA,10,1,0,"ssRNA(-)",1
+"Hendra henipavirus","Hendra henipavirus","Pterobat","0","Babayan2018",NA,57.1428571,1,0,"ssRNA(-)",1
+"Influenza A virus","Influenza A virus","Anseriformes","0","Webster1992",NA,NA,4,0,"ssRNA(-)",0
+"Influenza A virus","Influenza A virus","Artiodactyl","0","Webster1992",NA,NA,4,0,"ssRNA(-)",0
+"Influenza A virus","Influenza A virus","Carnivore","0","Gibbs2010",NA,NA,4,0,"ssRNA(-)",0
+"Influenza A virus","Influenza A virus","Charadriiformes","0","Webster1992",NA,NA,4,0,"ssRNA(-)",0
+"Influenza A virus","Influenza A virus","Human","0","WorldHealthOrganization2018",NA,NA,4,0,"ssRNA(-)",0
+"Japanese encephalitis virus","Japanese encephalitis virus","Artiodactyl","1","lord2015","Babayan2018",25,1,1,"ssRNA(+)",1
+"Japanese encephalitis virus","Japanese encephalitis virus","Pelecaniformes","1","weaver2004","Babayan2018",25,1,1,"ssRNA(+)",1
+"Kaeng Khoi orthobunyavirus","Kaeng Khoi orthobunyavirus","Orphan","?","Groseth2014","Groseth2014; Feng2017",NA,NA,NA,NA,NA
+"Kyasanur Forest disease virus","Kyasanur Forest disease virus","NonHumanPrimate","1","Calisher2003","Babayan2018",4,1,1,"ssRNA(+)",1
+"La Crosse orthobunyavirus",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Laguna Negra orthohantavirus","Laguna Negra orthohantavirus","Rodent","0","Shapshak2015",NA,15,1,0,"ssRNA(-)",1
+"Langat virus","Langat virus","Orphan","1","Babayan2018","Babayan2018",NA,NA,NA,NA,NA
+"Lyssavirus aravan","Aravan lyssavirus","Vespbat","0","Babayan2018",NA,NA,NA,NA,NA,NA
+"Lyssavirus australis","Australian bat lyssavirus",NA,"0",NA,NA,100,1,0,"ssRNA(-)",1
+"Lyssavirus caucasicus","West Caucasian bat lyssavirus","Vespbat","0","Babayan2018",NA,NA,NA,NA,NA,NA
+"Lyssavirus irkut","Irkut lyssavirus","Vespbat","0","Babayan2018",NA,100,1,0,"ssRNA(-)",1
+"Lyssavirus khujand","Khujand lyssavirus","Vespbat","0","Babayan2018",NA,NA,NA,NA,NA,NA
+"Lyssavirus lagos","Lagos bat lyssavirus","Pterobat","0","Babayan2018",NA,NA,NA,NA,NA,NA
+"Lyssavirus rabies","Rabies lyssavirus","Carnivore","0","Babayan2018",NA,100,1,0,"ssRNA(-)",1
+"Lyssavirus rabies","Rabies lyssavirus","Vespbat","0","Rupprecht2002",NA,100,1,0,"ssRNA(-)",1
+"Marburg marburgvirus","Marburg marburgvirus","Pterobat","0","Babayan2018",NA,80.9199319,3,0,"ssRNA(-)",1
+"Middelburg virus","Middelburg virus","Orphan","1","Babayan2018","Babayan2018",NA,NA,NA,NA,NA
+"Middle East respiratory syndrome-related coronavirus","Middle East respiratory syndrome-related coronavirus","Orphan","0","Babayan2018",NA,34.42113442,3,0,"ssRNA(+)",1
+"Monkeypox virus","Monkeypox virus","Rodent","0","Essbauer2010",NA,5.5,2,0,"dsDNA",1
+"Mucambo virus","Mucambo virus","Rodent","1","Contigiani2017a","Contigiani2017a",NA,NA,NA,NA,NA
+"Nipah henipavirus","Nipah henipavirus","Pterobat","0","Babayan2018",NA,42.5531915,1,0,"ssRNA(-)",1
+"Nipah henipavirus","Nipah henipavirus","Pterobat","0","Babayan2018",NA,65.1884701,3,0,"ssRNA(-)",1
+"Ntaya virus","Ntaya virus","Orphan","1","Babayan2018","Babayan2018",NA,NA,NA,NA,NA
+"Pacui virus",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Pestivirus C","Pestivirus C","Artiodactyl","0","Babayan2018",NA,NA,NA,NA,NA,NA
+"Pixuna virus","Pixuna virus","Rodent","1","Pisano2010","Pisano2010",NA,NA,NA,NA,NA
+"Potosi orthobunyavirus",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Puumala orthohantavirus","Puumala orthohantavirus","Rodent","0","Babayan2018",NA,0.55,1,0,"ssRNA(-)",1
+"Reston ebolavirus","Reston ebolavirus","Orphan","0","Babayan2018",NA,NA,NA,NA,NA,NA
+"Rift Valley fever phlebovirus","Rift Valley fever phlebovirus","Artiodactyl","1","Babayan2018","Babayan2018",1,1,1,"ssRNA(+/-)",1
+"Rio Grande phlebovirus",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Ross River virus","Ross River virus","Artiodactyl","1","Babayan2018","Babayan2018",0,1,1,"ssRNA(+)",1
+"Ross River virus","Ross River virus","Diprotodontia","1","Babayan2018","Babayan2018",0,1,1,"ssRNA(+)",1
+"Saint Louis encephalitis virus","Saint Louis encephalitis virus","Passeriformes","1","reisen2003","Babayan2018",10,1,1,"ssRNA(+)",1
+"Semliki Forest virus","Semliki Forest virus","Orphan","1","schlesinge2012","Babayan2018",NA,NA,NA,NA,NA
+"Severe acute respiratory syndrome-related coronavirus","Severe acute respiratory syndrome-related coronavirus","Pterobat","0","Babayan2018",NA,9.55791553,3,0,"ssRNA(+)",1
+"Simbu orthobunyavirus","Simbu orthobunyavirus",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Sindbis virus","Sindbis virus","Orphan","1","Babayan2018","Babayan2018",NA,NA,NA,NA,NA
+"Snowshoe hare orthobunyavirus",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Sosuga pararubulavirus","Sosuga pararubulavirus","Pterobat","0","Babayan2018",NA,0,1,0,"ssRNA(-)",1
+"Spondweni virus",NA,"Orphan","1","Babayan2018","Babayan2018",NA,NA,NA,NA,NA
+"Sudan ebolavirus","Sudan ebolavirus","Orphan","0","Babayan2018",NA,NA,NA,NA,NA,NA
+"Suid alphaherpesvirus 1","Suid alphaherpesvirus 1","Artiodactyl","0","Knipe2013",NA,0,1,0,"dsDNA",0
+"Tacaribe mammarenavirus","Tacaribe mammarenavirus","Rodent","0","Babayan2018",NA,NA,NA,NA,NA,NA
+"Tacaribe mammarenavirus","Tacaribe mammarenavirus","Vespbat","0","Babayan2018",NA,NA,NA,NA,NA,NA
+"Tahyna orthobunyavirus",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Tai Forest ebolavirus","Tai Forest ebolavirus","Orphan","0","Babayan2018",NA,NA,NA,NA,NA,NA
+"Tick-borne encephalitis virus","Tick-borne encephalitis virus","Rodent","1","Babayan2018","Babayan2018",2,1,1,"ssRNA(+)",1
+"Trivittatus orthobunyavirus",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Tula orthohantavirus","Tula orthohantavirus","Rodent","0","Babayan2018",NA,0,1,0,"ssRNA(-)",1
+"Usutu virus","Usutu virus","MULTIPLE","1","ashraf2015","Babayan2018",0,1,1,"ssRNA(+)",1
+"Venezuelan equine encephalitis virus","Venezuelan equine encephalitis virus","Perissodactyla","1","weaver2004","Babayan2018",0.19485264,1,1,"ssRNA(+)",1
+"Venezuelan equine encephalitis virus","Venezuelan equine encephalitis virus","Rodent","1","weaver2004","Babayan2018",0.19485264,1,1,"ssRNA(+)",1
+"Wesselsbron virus","Wesselsbron virus","Orphan","1","Babayan2018","Babayan2018",NA,NA,NA,NA,NA
+"West Nile virus","West Nile virus","Passeriformes","1","Knipe2013","Babayan2018",4.61381054,1,1,"ssRNA(+)",1
+"Western equine encephalitis virus","Western equine encephalitis virus","Passeriformes","1","Knipe2013","Knipe2013",4,1,1,"ssRNA(+)",1
+"Whitewater Arroyo mammarenavirus","Whitewater Arroyo mammarenavirus","Rodent","0","Babayan2018",NA,100,1,0,"ssRNA(+/-)",1
+"Woodchuck hepatitis virus","Woodchuck hepatitis virus","Rodent","0","Schaefer2007",NA,NA,NA,NA,NA,NA
+"Yellow fever virus","Yellow fever virus","Human","1","Knipe2013","Knipe2013",32.5,4,1,"ssRNA(+)",1
+"Yellow fever virus","Yellow fever virus","NonHumanPrimate","1","Knipe2013","Knipe2013",32.5,4,1,"ssRNA(+)",1
+"Yokose virus","Yokose virus","Vespbat","?","Babayan2018","Babayan2018",NA,NA,NA,NA,NA
+"Zaire ebolavirus","Zaire ebolavirus","Pterobat","0","Babayan2018",NA,76,3,0,"ssRNA(-)",1
+"Zika virus","Zika virus","Orphan","1","Babayan2018","Babayan2018",8.3,4,1,"ssRNA(+)",1

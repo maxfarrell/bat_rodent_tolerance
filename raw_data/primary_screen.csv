@@ -1,0 +1,354 @@
+PaperID,Virus_reported,Host_reported,Host_order,Susceptible_primary_YN,PathologyReported_YN,IndividualData_YN
+1,Yokose virus,Rousettus leschenaulti,Chiroptera,Y,Y,Y
+2,West Caucasian bat virus,Eptesicus fuscus,Chiroptera,Y,Y,Y
+3,Lagos bat virus,Eidolon helvum,Chiroptera,Y,Y,Y
+4,Marburg virus,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+5,Chikungunya virus,Pteropus giganteus,Chiroptera,Y,Y,Y
+5,Dengue virus,Pteropus giganteus,Chiroptera,Y,Y,Y
+6,Aravan virus,Eptesicus fuscus,Chiroptera,Y,Y,Y
+6,Khujand virus,Eptesicus fuscus,Chiroptera,Y,Y,Y
+6,Irkut virus,Eptesicus fuscus,Chiroptera,Y,Y,Y
+8,Rabies virus,Desmodus rotundus,Chiroptera,Y,Y,Y
+8,Marburg virus,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+8,Ebola virus variant Mayinga,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+8,Sudan ebolavirus variant Gulu,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+8,Bundibugyo ebolavirus,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+8,Taï Forest ebolavirus,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+8,Reston ebolavirus,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+9,Rabies virus,Antrozous pallidus pallidus,Chiroptera,Y,Y,Y
+10,Rabies virus,Artibeus intermedius,Chiroptera,Y,Y,Y
+12,Monkeypox virus,Cynomys ludovicianus,Rodentia,Y,Y,Y
+15,Kaeng Khoi virus,Chaerephon plicatus,Chiroptera,Y,Y,N
+18,Ebola virus,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+19,Japanese B encephalitis virus,Tadarida brasiliensis mexicana,Chiroptera,Y,Y,Y
+19,Japanese B encephalitis virus,Myotis lucifugus lucifugus,Chiroptera,Y,Y,Y
+19,Japanese B encephalitis virus,Eptesicus fuscus fuscus,Chiroptera,Y,Y,Y
+19,Saint Louis encephalitis virus,Tadarida brasiliensis mexicana,Chiroptera,Y,Y,Y
+19,Saint Louis encephalitis virus,Myotis lucifugus lucifugus,Chiroptera,Y,Y,Y
+20,Rabies virus,Tadarida mexicana,Chiroptera,Y,Y,N
+20,Rabies virus,Myotis lucifugus,Chiroptera,Y,Y,N
+21,Rabies virus,Myotis lucifugus,Chiroptera,Y,Y,Y
+23,Colorado tick fever virus,Citellus columbianus columbianus,Rodentia,Y,Y,Y
+23,Colorado tick fever virus,Citellus lateralis tescorum,Rodentia,Y,Y,Y
+23,Colorado tick fever virus,Eutamias amoenus,Rodentia,Y,Y,Y
+23,Colorado tick fever virus,Peromyscus maniculatus,Rodentia,Y,Y,Y
+24,Marburg virus,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+25,Dengue virus,Artibeus intermedius,Chiroptera,Y,Y,Y
+25,Dengue virus,Artibeus jamaicensis,Chiroptera,Y,Y,Y
+31,Rabies virus,Eptesicus fuscus,Chiroptera,Y,Y,Y
+32,Rabies virus,Pteropus vampyrus,Chiroptera,Y,Y,N
+32,Rabies virus,Phyllorina sp.,Chiroptera,NA,Y,N
+32,Rabies virus,Rhinolophus sp.,Chiroptera,NA,Y,N
+32,Rabies virus,Vesperugo sp.,Chiroptera,NA,Y,N
+33,Tacaribe virus,Carollia perspicillata,Chiroptera,Y,Y,Y
+33,Tacaribe virus,Artibeus jamaicensis,Chiroptera,Y,Y,Y
+34,Rabies virus,Tadarida mexicana,Chiroptera,Y,Y,N
+34,Rabies virus,Myotis lucifugus,Chiroptera,Y,Y,N
+35,Cocal virus,Myotis lucifugus lucifugus,Chiroptera,Y,Y,N
+38,Tick-borne encephalitis virus,Myotis myotis,Chiroptera,Y,Y,Y
+38,Tick-borne encephalitis virus,Barbastella barbastellus,Chiroptera,Y,Y,Y
+38,Tick-borne encephalitis virus,Plecotus auritus,Chiroptera,Y,Y,Y
+39,Tick-borne encephalitis virus,Glis glis,Rodentia,Y,Y,Y
+40,Tacaribe virus,Artibeus jamaicensis,Chiroptera,Y,Y,Y
+42,Kyasanur Forest Disease Virus,Cynopterus sphinx,Chiroptera,Y,Y,Y
+44,Rabies virus,Tadarida brasiliensis mexicana,Chiroptera,Y,Y,Y
+46,Rabies virus,Tadarida b. mexicana,Chiroptera,Y,Y,N
+47,Rabies virus,Tadarida brasiliensis mexicana,Chiroptera,Y,Y,N
+47,Rabies virus,Myotis lucifugus lucifugus,Chiroptera,Y,Y,N
+50,Marburg virus,Rousettus aegyptiacus,Chiroptera,Y,N,Y
+52,Kyasanur Forest Disease Virus,Petaurista petaurista philippensis,Rodentia,Y,Y,Y
+53,Nipah virus,Pteropus poliocephalus,Chiroptera,Y,Y,Y
+55,Lagos bat virus,Eidolon helvum,Chiroptera,Y,Y,Y
+56,Venezuelan equine encephalitis,Proechimys semispinosus,Rodentia,Y,Y,Y
+56,Venezuelan equine encephalitis,Sigmodon hispidus,Rodentia,Y,Y,Y
+56,Venezuelan equine encephalitis,Zygodontomys microtinus,Rodentia,Y,Y,Y
+56,Venezuelan equine encephalitis,Oryzomys capito,Rodentia,Y,Y,Y
+58,Ground squirrel hepatitis virus,Spermophilus beecheyi,Rodentia,Y,N,N
+58,Ground squirrel hepatitis virus,Spermophilus lateralis,Rodentia,N,N,N
+58,Ground squirrel hepatitis virus,Eutamias spp.,Rodentia,N,Y,N
+60,Colorado tick fever virus,Erethizon dorsatum,Rodentia,Y,Y,Y
+61,Japanese encephalitis virus,Cynopterus sphinx,Chiroptera,Y,N,N
+63,Rabies virus,Eptesicus fuscus,Chiroptera,Y,Y,Y
+64,Tick-borne encephalitis virus,Myodes rutilus Pallas,Rodentia,Y,N,N
+65,Rabies virus,Gerbillus,Rodentia,Y,Y,N
+66,Rabies virus,Desmodus rotundus,Chiroptera,Y,Y,Y
+68,Ross river virus,Pteropus poliocephalus,Chiroptera,Y,N,Y
+70,Marburg virus,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+71,Kyasanur Forest Disease Virus,Hystrix indica,Rodentia,Y,Y,Y
+75,Kyasanur Forest Disease Virus,Rousettus leschenaulti,Chiroptera,Y,Y,Y
+77,Marburg virus,Rousettus aegyptiacus,Chiroptera,Y,N,Y
+78,Monkeypox virus,Funisciurus anerythrus,Rodentia,Y,Y,Y
+81,Hantaan virus,A. a. coreae,Rodentia,Y,Y,Y
+81,Hantaan virus,A. a. jejuensis,Rodentia,Y,Y,Y
+81,Hantaan virus,Callomys callosus,Rodentia,Y,Y,Y
+81,Hantaan virus,Sigmodon hispidus,Rodentia,Y,Y,Y
+81,Hantaan virus,Microtus montanus,Rodentia,Y,Y,Y
+81,Hantaan virus,Apodemus speciosus,Rodentia,Y,Y,Y
+81,Hantaan virus,Apodemus peninsulae,Rodentia,Y,Y,Y
+81,Hantaan virus,A. a. ningpoensis,Rodentia,Y,Y,Y
+83,TRVL 34053-1 virus,Oryzomys laticeps velutinus,Rodentia,Y,Y,Y
+83,TRVL 34053-1 virus,Zygodontomys b. brevicauda,Rodentia,Y,Y,Y
+84,Chikungunya virus,Aethomys chrysophilus,Rodentia,Y,Y,Y
+84,Chikungunya virus,Mastomys natalensis,Rodentia,Y,Y,Y
+84,Chikungunya virus,Saccostomus campestris,Rodentia,Y,Y,Y
+84,Chikungunya virus,Tatera brantsi,Rodentia,Y,Y,Y
+84,Germiston,Tatera brantsi,Rodentia,Y,Y,Y
+84,H336,Aethomys chrysophilus,Rodentia,Y,Y,Y
+84,H336,Lemniscomys griselda,Rodentia,Y,Y,Y
+84,H336,Mastomys natalensis,Rodentia,Y,Y,Y
+84,H336,Saccostomus campestris,Rodentia,Y,Y,Y
+84,H336,Tatera brantsi,Rodentia,Y,Y,Y
+84,Middelburg,Aethomys chrysophilus,Rodentia,Y,Y,Y
+84,Middelburg,Mastomys natalensis,Rodentia,Y,Y,Y
+84,Middelburg,Saccostomus campestris,Rodentia,Y,Y,Y
+84,Middelburg,Tatera brantsi,Rodentia,Y,Y,Y
+84,Pongola,Aethomys chrysophilus,Rodentia,N,Y,Y
+84,Pongola,Lemniscomys griselda,Rodentia,N,Y,Y
+84,Pongola,Mastomys natalensis,Rodentia,N,Y,Y
+84,Pongola,Saccostomus campestris,Rodentia,N,Y,Y
+84,Pongola,Tatera brantsi,Rodentia,N,Y,Y
+84,Rift Valley fever virus,Aethomys chrysophilus,Rodentia,Y,Y,Y
+84,Rift Valley fever virus,Mastomys natalensis,Rodentia,Y,Y,Y
+84,Rift Valley fever virus,Saccostomus campestris,Rodentia,Y,Y,Y
+84,Rift Valley fever virus,Tatera brantsi,Rodentia,Y,Y,Y
+84,Simbu virus,Mastomys natalensis,Rodentia,Y,Y,Y
+84,Simbu virus,Saccostomus campestris,Rodentia,Y,Y,Y
+84,Simbu virus,Tatera brantsi,Rodentia,Y,Y,Y
+84,Spondweni,Aethomys chrysophilus,Rodentia,N,Y,Y
+84,Spondweni,Lemniscomys griselda,Rodentia,N,Y,Y
+84,Spondweni,Mastomys natalensis,Rodentia,N,Y,Y
+84,Spondweni,Saccostomus campestris,Rodentia,N,Y,Y
+84,Spondweni,Tatera brantsi,Rodentia,N,Y,Y
+84,Wesselsbron,Aethomys chrysophilus,Rodentia,N,Y,Y
+84,Wesselsbron,Mastomys natalensis,Rodentia,N,Y,Y
+84,Wesselsbron,Otomys irroratus,Rodentia,N,Y,Y
+84,Wesselsbron,Saccostomus campestris,Rodentia,N,Y,Y
+84,Wesselsbron,Tatera brantsi,Rodentia,N,Y,Y
+84,West Nile virus,Aethomys chrysophilus,Rodentia,Y,Y,Y
+84,West Nile virus,Mastomys natalensis,Rodentia,N,Y,Y
+84,West Nile virus,Otomys irroratus,Rodentia,N,Y,Y
+84,West Nile virus,Rhabdomys pumilio,Rodentia,N,Y,Y
+88,Monkey pox virus,Cynomys ludovicianus,Rodentia,Y,Y,Y
+89,Eastern equine encephalomyelitis virus,Myotis lucifugus,Chiroptera,Y,N,N
+89,Eastern equine encephalomyelitis virus,Myotis keenie,Chiroptera,Y,N,N
+89,Eastern equine encephalomyelitis virus,Eptesicus fuscus,Chiroptera,Y,N,N
+89,Eastern equine encephalomyelitis virus,Pipistrellus subflavus,Chiroptera,Y,N,N
+94,Japanese B encephalitis virus,Eptesicus fuscus,Chiroptera,Y,N,Y
+95,Puumala virus,Myodes glareolus,Rodentia,Y,Y,N
+101,Rabies virus,Antrozous pallidus,Chiroptera,Y,N,Y
+104,Foot and mouth disease,Dasyprocta Aguti,Rodentia,Y,Y,Y
+105,Nipah virus,Rousettus aegyptiacus,Chiroptera,N,Y,Y
+107,Avian Influenza Virus H3N6,Mus musculus,Rodentia,Y,Y,Y
+107,Avian Influenza Virus H3N8,Mus musculus,Rodentia,Y,Y,Y
+107,Avian Influenza Virus H4N6,Mus musculus,Rodentia,Y,Y,Y
+107,Avian Influenza Virus H4N8,Mus musculus,Rodentia,Y,Y,Y
+107,Avian Influenza Virus H6N2,Mus musculus,Rodentia,Y,Y,Y
+109,Venezuelan encephalitis virus,Artibeus jamaicensis,Chiroptera,Y,Y,Y
+109,Venezuelan encephalitis virus,Artibeus lituratus,Chiroptera,Y,Y,Y
+109,Venezuelan encephalitis virus,Phyllostomus discolor,Chiroptera,Y,Y,Y
+109,Venezuelan encephalitis virus,Sturnira lilium,Chiroptera,Y,Y,Y
+109,Venezuelan encephalitis virus,Carollia subrufa,Chiroptera,Y,Y,Y
+109,Venezuelan encephalitis virus,Sigmodon hispidus,Rodentia,Y,Y,Y
+111,Rio Grande virus,Neotoma micropus,Rodentia,Y,Y,N
+115,Bat Influenza A Virus H18N11,Carollia perspicillata,Chiroptera,Y,Y,Y
+117,Aujeszky's disease virus,Rattus norvegicus,Rodentia,N,Y,Y
+117,Classical swine fever virus,Rattus rattus,Rodentia,N,Y,Y
+119,Tahyna virus,Myotis myotis Borkhausen,Chiroptera,N,Y,Y
+121,Ground squirrel hepatitis virus,Spermophilus beecheyi,Rodentia,Y,Y,N
+123,Influenza A Virus H9N2,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+126,Rabies virus,Xerus (Euxerus) Erythropus,Rodentia,Y,Y,Y
+128,European bat lyssavirus type 1,Eptesicus fuscus,Chiroptera,Y,Y,N
+130,Rabies virus,Eptesicus fuscus,Chiroptera,Y,Y,Y
+131,Foot and mouth disease,Desmodus rotundus,Chiroptera,Y,Y,Y
+137,Chikungunya virus,Eidolon helvum,Chiroptera,N,N,Y
+137,Semliki Forest Virus,Eidolon helvum,Chiroptera,Y,N,Y
+137,Sindbis (K 163/61),Eidolon helvum,Chiroptera,Y,N,Y
+137,Yellow Fever (Seganga SE 7445),Eidolon helvum,Chiroptera,Y,N,Y
+137,Yellow Fever (French neurotropic),Eidolon helvum,Chiroptera,Y,N,Y
+137,Zika virus,Eidolon helvum,Chiroptera,Y,N,Y
+137,West Nile virus,Eidolon helvum,Chiroptera,Y,N,Y
+137,Ntaya,Eidolon helvum,Chiroptera,N,N,Y
+137,Bunyamwera,Eidolon helvum,Chiroptera,Y,N,Y
+137,Semliki Forest Virus,Rousettus aegyptiacus,Chiroptera,Y,N,Y
+137,Entebbe bat salivary gland,Rousettus aegyptiacus,Chiroptera,Y,N,Y
+137,Usutu virus,Rousettus aegyptiacus,Chiroptera,Y,N,Y
+137,West Nile virus,Rousettus aegyptiacus,Chiroptera,Y,N,Y
+137,Yellow Fever (Phlebotomus),Rousettus aegyptiacus,Chiroptera,Y,N,Y
+137,Yellow Fever (French neurotropic),Rousettus aegyptiacus,Chiroptera,Y,N,Y
+137,Zika virus,Rousettus aegyptiacus,Chiroptera,Y,N,Y
+137,Bunyamwera,Rousettus aegyptiacus,Chiroptera,Y,N,Y
+137,Semliki Forest Virus,Tadarida (Mopt) condylura,Chiroptera,Y,N,Y
+137,Bunyamwera,Tadarida (Mopt) condylura,Chiroptera,Y,N,Y
+137,Yellow Fever (Phlebotomus),Tadarida (Mopt) condylura,Chiroptera,Y,N,Y
+137,Zika virus,Tadarida (Mopt) condylura,Chiroptera,Y,N,Y
+137,Ntaya,Tadarida (Mopt) condylura,Chiroptera,Y,N,Y
+139,Monkeypox virus,Spermophilus tridecemlineatus,Rodentia,Y,Y,N
+140,Zika virus,Artibeus jamaicensis,Chiroptera,Y,Y,Y
+142,Zika virusPRVA BC59,Marmota monax,Rodentia,N,Y,N
+142,Zika virusPRVA BC59,Peromyscus maniculatus,Rodentia,N,Y,N
+142,Zika virusFSS 13025,Peromyscus maniculatus,Rodentia,N,Y,N
+145,Langat virus,Microtus agrestis,Rodentia,Y,Y,Y
+145,Semliki Forest Virus,Microtus agrestis,Rodentia,Y,Y,Y
+148,Monkeypox virus,Cynomys ludovicianus,Rodentia,Y,Y,N
+149,La Crosse virus,Tamias striatus griseus,Rodentia,Y,Y,Y
+149,Trivittatus,Tamias striatus griseus,Rodentia,Y,Y,Y
+149,La Crosse virus,Sciurus carolinensis,Rodentia,Y,Y,Y
+149,Trivittatus,Sciurus carolinensis,Rodentia,N,Y,Y
+155,Sosuga virus,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+160,Kyasanur Forest Disease Virus,Rhinolophus rouxii,Chiroptera,Y,N,N
+162,Dengue virus,Artibeus jamaicensis,Chiroptera,N,Y,Y
+163,Tick-borne encephalitis virus,Glis glis,Rodentia,Y,Y,Y
+166,Monkeypox virus,Spermophilus tridecemlineatus,Rodentia,Y,Y,Y
+169,Venezuelan equine encephalitis virus,Baiomys musculus,Rodentia,Y,Y,Y
+169,Venezuelan equine encephalitis virus,Liomys salvini,Rodentia,Y,Y,Y
+169,Venezuelan equine encephalitis virus,Oligoryzomys fulvescens,Rodentia,Y,Y,Y
+169,Venezuelan equine encephalitis virus,Oryzomys couesi,Rodentia,Y,Y,Y
+169,Venezuelan equine encephalitis virus,Sigmodon hispidus,Rodentia,Y,Y,Y
+176,Tahyna virus,Citellus citellus,Rodentia,Y,N,Y
+176,Tahyna virus,Glis glis,Rodentia,Y,N,Y
+176,Tahyna virus,Dormice,Rodentia,Y,N,Y
+177,Rabies virus,Desmodus rotundus,Chiroptera,Y,Y,Y
+178,West Nile virus,Sciurus niger,Rodentia,Y,Y,Y
+180,Tick-borne encephalitis virus,Myodes rutilus,Rodentia,Y,N,N
+180,Tick-borne encephalitis virus,Apodemus agrarius,Rodentia,Y,N,N
+182,Western equine encephalomyelitis virus,Spermophilus richardsonii,Rodentia,Y,Y,Y
+183,Puumala virus,Myodes glareolus,Rodentia,Y,N,Y
+184,Venezuelan equine encephalomyelitis virus,Proechimys semispinosus,Rodentia,Y,N,N
+184,Mucambo virus,Proechimys semispinosus,Rodentia,Y,N,N
+184,Pixuna virus,Proechimys semispinosus,Rodentia,Y,N,N
+186,La Crosse virus,Tamias striatus,Rodentia,Y,Y,N
+186,Snowshoe hare virus,Tamias striatus,Rodentia,Y,Y,N
+186,SSH/SSH/LAC,Tamias striatus,Rodentia,Y,Y,N
+186,SSH/LAC/SSH,Tamias striatus,Rodentia,Y,Y,N
+186,SSH/LAC/LAC,Tamias striatus,Rodentia,Y,Y,N
+187,Hendra virus,Pteropus alecto,Chiroptera,Y,Y,Y
+193,Eastern encephalitis virus,Cittellus tridecemlineatus,Rodentia,Y,Y,Y
+193,Eastern encephalitis virus,Marmota monax,Rodentia,Y,Y,Y
+193,Eastern encephalitis virus,Sciurus carolinensis,Rodentia,Y,Y,Y
+193,Eastern encephalitis virus,Tamias striatus,Rodentia,Y,Y,Y
+193,Eastern encephalitis virus,Castor canadensis,Rodentia,Y,Y,Y
+193,Eastern encephalitis virus,Peromyscus leucopus,Rodentia,Y,Y,Y
+193,Eastern encephalitis virus,Microtus pennsylvanicus,Rodentia,Y,Y,Y
+193,Eastern encephalitis virus,Ondatra zibetheca,Rodentia,Y,Y,Y
+197,Japanese B encephalitis virus,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+199,Japanese B encephalitis virus,Eptesicus fuscus,Chiroptera,Y,N,Y
+199,Japanese B encephalitis virus,Tadarida b. mexicana,Chiroptera,Y,N,Y
+199,Japanese B encephalitis virus,Myotis lucifugus lucifugus,Chiroptera,Y,N,Y
+203,Western equine encephalomyelitis virus,Ammospermophilus nelsoni,Rodentia,Y,Y,Y
+203,Western equine encephalomyelitis virus,Citellus beecheyi,Rodentia,Y,Y,Y
+203,Western equine encephalomyelitis virus,Dipodomys heermanni,Rodentia,Y,Y,Y
+203,Western equine encephalomyelitis virus,Dipodomys nitratoides,Rodentia,Y,Y,Y
+203,Western equine encephalomyelitis virus,Peromyscus maniculatus,Rodentia,Y,Y,Y
+203,Western equine encephalomyelitis virus,Sciurus griseus,Rodentia,Y,Y,Y
+204,Korean Hemorrhagic Fever,Apodemus agrarius coreae,Rodentia,Y,Y,N
+204,Korean Hemorrhagic Fever,Apodemus agrarius jejudoica,Rodentia,Y,Y,N
+206,Hantaan virus,Apodemus agrarius coreae,Rodentia,Y,N,N
+206,Hantaan virus,Apodemus agrarius Jejuensis,Rodentia,Y,N,N
+207,Hantaan virus,Apodemus agrarius,Rodentia,Y,N,Y
+207,Hantaan virus,Rattus norvegicus,Rodentia,Y,N,Y
+207,Hantaan virus,Rattus rattus,Rodentia,Y,N,Y
+209,Puumala virus Kazan-wt,Clethrionomys glareolus,Rodentia,Y,N,Y
+209,Tula virus,Clethrionomys glareolus,Rodentia,Y,N,Y
+209,Dobrava virus,Clethrionomys glareolus,Rodentia,N,N,Y
+209,Puumala virus,Microtus agrestis,Rodentia,Y,N,Y
+209,Tula virus,Microtus agrestis,Rodentia,N,N,Y
+209,Puumala virus,Lemmus sibiricus,Rodentia,Y,N,Y
+209,Saaremaa virus,Apodemus flavicollis,Rodentia,Y,N,Y
+209,Saaremaa virus,Apodemus agrarius,Rodentia,Y,N,Y
+210,Rift Valley fever virus,Arvicanthis niloticus,Rodentia,Y,N,N
+210,Rift Valley fever virus,Mastomys erythroleucus,Rodentia,Y,N,N
+212,West Nile virus,Eptesicus fuscus,Chiroptera,Y,Y,Y
+212,West Nile virus,Tadarida brasiliensis,Chiroptera,N,Y,Y
+217,Whitewater Arroyo virus,Neotoma albigula,Rodentia,Y,Y,N
+218,West Nile virus,Sciurus carolinensis,Rodentia,Y,Y,Y
+219,Turkmenia-1-74,Rhombomys opimus,Rodentia,Y,Y,N
+219,Turkmenia-1-74,Citellus fulvus,Rodentia,Y,Y,N
+221,Lyssavirus Rousettus isolate,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+221,Lyssavirus Eptesicus isolate,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+224,Potosi virus,Tamias striatus,Rodentia,Y,N,Y
+226,Tick-borne encephalitis virus,Apodemus flavicollis,Rodentia,Y,Y,Y
+227,Venezuelan equine encephalomyelitis virusstrain Fe3-7C,Peromyscus gossypinus,Rodentia,Y,Y,Y
+231,Rift Valley fever virus,Aethomys namaquensis,Rodentia,Y,Y,Y
+241,Hendra virus,Pteropus poliocephalus,Chiroptera,Y,Y,Y
+242,Hendra virus,Pteropus alecto,Chiroptera,Y,Y,Y
+242,Nipah virus,Pteropus alecto,Chiroptera,Y,Y,Y
+242,Nipah virus,Pteropus vampyrus,Chiroptera,Y,Y,Y
+243,SARS-CoV-2,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+244,SARS-CoV-2,Cricetulus griseus,Rodentia,Y,Y,Y
+245,Japanese B encephalitis virus,Eptesicus fuscus,Chiroptera,Y,Y,Y
+245,Japanese B encephalitis virus,Myotis lucifugus,Chiroptera,Y,Y,Y
+245,Japanese B encephalitis virus,Pipistrellus subflavus,Chiroptera,Y,Y,Y
+246,Rabies virus,Tadarida mexicana,Chiroptera,Y,Y,N
+246,Rabies virus,Myotis lucifugus,Chiroptera,Y,Y,N
+247,La Crosse virus,Tamias striatus,Rodentia,Y,N,N
+248,Newcastle disease virus,Myotus lucifugus,Chiroptera,Y,Y,N
+249,Monkey pox virus MPXV-USA-2003-044,Cynomys ludovicianus,Rodentia,Y,Y,Y
+250,Monkey pox virus MPXV-2003-044,Cynomys ludovicianus,Rodentia,Y,Y,Y
+250,Monkey pox virus MPXV-2003-358,Cynomys ludovicianus,Rodentia,Y,Y,Y
+252,Monkey pox virus,Cynomys ludovicianus,Rodentia,Y,Y,N
+253,Monkey pox virus ROC-2003-358,Cynomys ludovicianus,Rodentia,Y,Y,Y
+254,Congo Basin Monkey pox virus,Cricetomys gambianus,Rodentia,Y,Y,Y
+254,West African Monkey pox virus,Cricetomys gambianus,Rodentia,Y,Y,Y
+256,Monkey pox virus MPX-ZAI-1979-005,Spermophilus tridecemlineatus,Rodentia,Y,Y,Y
+257,West Nile virus,Sciurus niger,Rodentia,Y,Y,Y
+258,West Nile virus,Sciurus niger,Rodentia,Y,Y,Y
+259,West Nile virus,Tamias striatus,Rodentia,Y,Y,Y
+261,Rift Valley fever virus,Miniopterus schreibersii,Chiroptera,Y,Y,Y
+261,Rift Valley fever virus,Eptesicus capensis,Chiroptera,Y,Y,Y
+265,Rift Valley fever virus,Apodemus sylvaticus,Rodentia,Y,Y,N
+265,Rift Valley fever virus,Microtus agrestis,Rodentia,Y,Y,N
+265,Rift Valley fever virus,Muscardinus avellanarius,Rodentia,Y,Y,N
+265,Rift Valley fever virus,Sciurus carolinensis,Rodentia,Y,Y,N
+265,Middle East Respiratory syndrome virus,Artibeus jamaicensis,Chiroptera,Y,Y,Y
+273,European bat lyssavirus type 1,Eptesicus fuscus,Chiroptera,Y,Y,Y
+274,European bat lyssavirus type 1a,Eptesicus serotinus,Chiroptera,Y,Y,Y
+276,European bat lyssavirus type 2,Myotis daubentonii,Chiroptera,Y,Y,Y
+278,Rabies virus,Desmodus rotundus,Chiroptera,Y,Y,Y
+279,Rabies virus,Desmodus rotundus,Chiroptera,Y,Y,Y
+280,Rabies virus,Desmodus rotundus,Chiroptera,Y,Y,N
+281,Rabies virus,Desmodus rotundus,Chiroptera,Y,Y,N
+282,Rabies virus,Tadarida b. mexicana,Chiroptera,Y,Y,N
+284,Rabies virus,Eptesicus fuscus,Chiroptera,Y,Y,N
+285,Australian bat lyssavirus,Pteropus poliocephalus,Chiroptera,Y,Y,Y
+285,Eptesicus I virus,Pteropus poliocephalus,Chiroptera,Y,Y,Y
+292,Japanese B encephalitis virus,Tadarida b. mexicana,Chiroptera,Y,Y,Y
+292,Saint Louis encephalitis virus,Tadarida b. mexicana,Chiroptera,Y,Y,Y
+294,Woodchuck hepatitis virus,Marmota monax,Rodentia,Y,N,N
+299,Woodchuck hepatitis virus,Marmota monax,Rodentia,Y,N,N
+301,Ground squirrel hepatitis virus,Spermophilus beecheyi,Rodentia,Y,Y,N
+304,Ebola Zaire virus Zaire-95,Tadarida condylura,Chiroptera,Y,Y,Y
+304,Ebola Zaire virus Zaire-95,Tadarida pumila,Chiroptera,Y,Y,Y
+304,Ebola Zaire virus Zaire-95,Epomophorus wahlbergi,Rodentia,Y,Y,Y
+304,Ebola Zaire virus Zaire-95,Mastomys natalensis ss,Rodentia,N,Y,Y
+305,Marburg virus,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+306,Hendra virus,Pteropus poliocephalus,Chiroptera,Y,Y,Y
+307,Rabies virus,Lasiurus borealis,Chiroptera,Y,Y,Y
+307,Rabies virus,Deer mouse (Peromyscus sp.),Chiroptera,Y,Y,Y
+307,Rabies virus,Wood rat (Neotoma sp.),Chiroptera,Y,Y,Y
+308,Bat lyssavirus Aravan,Pipistrellus pipistrellus,Chiroptera,Y,Y,N
+308,Rabies virus 1150,Pipistrellus pipistrellus,Chiroptera,Y,Y,N
+308,Lyssavirus serotype 4 Yuli,Pipistrellus pipistrellus,Chiroptera,Y,Y,N
+309,Sosuga virus,Rousettus aegyptiacus,Chiroptera,Y,Y,Y
+321,Puumala hantavirus,Lemmus lemmus,Rodentia,N,N,N
+321,Puumala hantavirus,Myodes glareolus,Rodentia,Y,N,N
+323,Rio Mamore hantavirus,Sigmodontinae,Rodentia,Y,N,Y
+325,Puumala virus,Myodes glareolus,Rodentia,Y,N,N
+326,Rift Valley fever virus,Rattus rattus,Rodentia,Y,N,N
+326,Rift Valley fever virus,Arvicanthis niloticus,Rodentia,Y,N,N
+326,Rift Valley fever virus,Acomys cahirinus,Rodentia,Y,N,N
+326,Rift Valley fever virus,Mus musculus,Rodentia,Y,N,N
+327,Rift Valley fever virus,Praomys natalensis,Rodentia,N,Y,N
+327,Rift Valley fever virus,Tatera leucogaster,Rodentia,Y,Y,N
+327,Rift Valley fever virus,Aethomys chrysophilus,Rodentia,Y,Y,N
+327,Rift Valley fever virus,Saccostomys campestris,Rodentia,Y,Y,N
+327,Rift Valley fever virus,Lemniscomys griselda,Rodentia,Y,Y,N
+327,Rift Valley fever virus,Rhabdomys pumilio,Rodentia,Y,Y,N
+327,Rift Valley fever virus,Aethomys namaquensis,Rodentia,Y,Y,N
+329,SARS-CoV-2,Eptesicus fuscus,Chiroptera,N,Y,Y
+334,Bat Influenza A Virus H18N11,Artibeus jamaicensis,Chiroptera,Y,Y,Y
+335,Rabies virus,Artibeus planirostris trinitatis,Chiroptera,Y,Y,Y
+336,Rabies virus,Artibeus planirostris trinitatis,Chiroptera,Y,Y,Y
+336,Rabies virus,Desmodus rotundus murinus,Chiroptera,Y,Y,Y
+337,Hendra virus,Pteropus poliocephalus,Chiroptera,Y,Y,Y
+338,Ground squirrel hepatitis virus,Spermophilus beecheyi,Rodentia,Y,Y,N
+339,Pacui virus,Oryzomys capito,Rodentia,Y,Y,N
