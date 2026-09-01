@@ -10,8 +10,8 @@ require(ape);packageVersion("ape")#5.5
 
 
 # data
-primary <- read.csv("../raw_data/primary_screen_Mar5_2024.csv")
-dat <- read.csv("../raw_data/individual_data_Mar20_2024.csv")
+primary <- read.csv("../raw_data/primary_screen.csv")
+dat <- read.csv("../raw_data/individual_data.csv")
 vtax <- read.csv("../clean_data/Virus_taxonomy.csv")
 viruses <- read.csv("../raw_data/VirusNames_translation_Feb23_2024.csv")
 viruses <- dplyr::left_join(viruses, vtax)
@@ -94,82 +94,167 @@ dat$Route_type[grep("Contact", dat$Route_location)] <- "Bite; Contact"
 
 sort(unique(dat$Route_type))
 
-# "Subcutaneous injections are administered in the fat layer, underneath the skin. 
-# Intramuscular injections are delivered into the muscle. 
-# Intradermal injections are delivered into the dermis, 
-# or the skin layer underneath the epidermis (which is the upper skin layer)."
 
-# rough collapsing
-sort(table(dat$Route_type), decreasing=TRUE)
 
-# Injection into body other than brain:
-# Subcutaneous / Intramuscular / Intraperitoneal / Intradermal / Subdermal / Intravenous
+# less stringent collapsing of route types
 
-dat$Route_type[dat$Route_type%in%
-				c("Subcutaneous","Intramuscular","Intraperitoneal",
-					"Intradermal","Subdermal","Intravenous",
-					"Footpad","Subcutaneous; Intraperitoneal",
-					"Intraperitoneal; Intravenous",
-					"Intracardial; Intraperitoneal")] <- "Injection (body)"
+dat_rt_lrg <- dat
+
+# lower / delayed severity (localized & peripheral)
+dat_rt_lrg$Route_type[dat_rt_lrg$Route_type%in%
+				c("Subcutaneous", "Intradermal","Subdermal",
+					"Footpad")] <- "Subcutaneous / Subdermal / Intradermal"
+
+# Intraperitoneal
+dat_rt_lrg$Route_type[dat_rt_lrg$Route_type%in%
+				c("Intraperitoneal")] <- "Intraperitoneal"
+
+# Intramuscular
+dat_rt_lrg$Route_type[dat_rt_lrg$Route_type%in%
+				c("Intramuscular")] <- "Intramuscular"
+
+# Intraperitoneal
+dat_rt_lrg$Route_type[dat_rt_lrg$Route_type%in%
+				c("Intraperitoneal")] <- "Intraperitoneal"
+
+# Intravenous
+dat_rt_lrg$Route_type[dat_rt_lrg$Route_type%in%
+				c("Intravenous")] <- "Intravenous"
+
+# Intracardial
+dat_rt_lrg$Route_type[dat_rt_lrg$Route_type%in%
+				c("Intracardial")] <- "Intracardial"
 
 # Injection into brain:
-dat$Route_type[dat$Route_type%in%
+dat_rt_lrg$Route_type[dat_rt_lrg$Route_type%in%
 				c("Intracerebral","Intracranial")] <- "Injection (brain)"
 
 
 # Oral / nasal inoculation:
-dat$Route_type[dat$Route_type%in%
+dat_rt_lrg$Route_type[dat_rt_lrg$Route_type%in%
 				c("Oronasal","Oral","Intranasal", "Nasal")] <- "Oronasal"
 
 # Simluated "Natural" infections
-dat$Route_type[dat$Route_type%in%
+dat_rt_lrg$Route_type[dat_rt_lrg$Route_type%in%
 				c("Transplacental","Contact","Skin","Vector",
 					"Bite","Bite; Contact", "Aerosol","Natural")] <- "Natural"
 
 # setting others (multiple routes or vague "injected") to NA
-dat$Route_type[dat$Route_type%in%
-				c("Injected - no further details","Subcutaneous; Intranasal")] <- NA
+dat_rt_lrg$Route_type[dat_rt_lrg$Route_type%in%
+				c("Injected - no further details","Subcutaneous; Intranasal",
+					"Intracardial; Intraperitoneal", "Subcutaneous; Intraperitoneal",
+					"Intraperitoneal; Intravenous")] <- NA
 
-sort(table(dat$Route_type), decreasing=TRUE)
+sort(table(dat_rt_lrg$Route_type), decreasing=TRUE)
+
+sum(is.na(dat_rt_lrg$Route_type))#122
 
 
-colors <- c("#648FFF","#785EF0","#DC267F","#FE6100","#FFB000")
 
-dat_rt <- dat[!is.na(dat$Route_type),]
+colors <- c("#648FFF","#785EF0","#DC267F","#FE6100","#FFB000", "#949698")
 
-rt_stack <- ggplot(dat_rt, aes(fill=Route_type,  x=Host_order)) + 
-		geom_bar(position="stack", stat="count") +
-		# geom_point(position = position_jitter(seed = 1, width = 0.2), 
-		# 	alpha=0.4) + 
-		# scale_y_continuous(trans='log10') +
-		scale_fill_manual(values=colors) + scale_color_manual(values=colors) +
-		theme(legend.position = "none",legend.title=element_blank()) + 
-		xlab("") + ylab("Number of individuals")  
 
-# rt_stack
+dat_rt_lrg_plot <- dat_rt_lrg[!is.na(dat_rt_lrg$Route_type),]
 
-rt_fill <- ggplot(dat_rt, aes(fill=Route_type, x=Host_order)) + 
+
+rt_stack <- ggplot(dat_rt_lrg_plot, aes(fill=Route_type,  x=Host_order)) + 
 		geom_bar(position="fill", stat="count") +
 		# geom_point(position = position_jitter(seed = 1, width = 0.2), 
 		# 	alpha=0.4) + 
 		# scale_y_continuous(trans='log10') +
 		scale_fill_manual(values=colors) + scale_color_manual(values=colors) +
-		theme(legend.position = "none",legend.title=element_blank()) + 
+		# theme(legend.position = "none",legend.title=element_blank()) + 
 		xlab("") + ylab("Proportion of individuals")  
 
-# rt_fill
+rt_stack
 
-combo_plot <- cowplot::plot_grid(rt_stack, rt_fill)
+# View(dat_rt_lrg_plot)
 
-# extract legend from plot1
-legend <- get_legend(
-  rt_stack + theme(legend.position = "bottom")
-)
+
+# merging with severity data to plot severity by inoculation route
+
+dat_symptoms <- read.csv("../clean_data/symptoms_severity.csv")
+
+dat_rt_lrg_plot <- left_join(dat_symptoms, dat_rt_lrg_plot)
+dat_rt_lrg_plot <- dat_rt_lrg_plot[!is.na(dat_rt_lrg_plot$Dose_unit),]
+
+colours_BR <- c("#1B85BF", "#AB1808")
+
+p5 <- ggplot(dat_rt_lrg_plot, aes(y=severity_rank, x=Route_type, fill=Host_order, color=Host_order, shape=Host_order)) + 
+		# geom_violin(alpha=0.4) +
+		geom_point(position = position_jitter(seed = 1, height = 0.15), 
+			alpha=0.4) + 
+		# scale_x_continuous(trans='log10') +
+		scale_fill_manual(values=colours_BR) + scale_color_manual(values=colours_BR) +
+		# theme(legend.position = "none") + 
+	    labs(color="  Host order", shape="  Host order", fill="  Host order") + ylab("Severity") + xlab("Inoculation Route")
+		# facet_grid(cols=vars(Route_type)) + theme(legend.key=element_blank()) 
+				# stat_summary(fun = "mean",
+    #            geom = "crossbar", 
+    #            width = 0.7,
+    #            colour = "black")
+p5
+
+
+# barplot version 
+
+# 1. Pre-calculate the sample sizes per bar (Host + Route combination)
+bar_labels <- dat_rt_lrg_plot %>%
+  group_by(Host_order, Route_type) %>%
+  summarize(
+    n_individuals = n(),
+    n_studies = n_distinct(PaperID),
+    .groups = "drop"
+  ) %>%
+  # Create a clean string label to print on the plot
+  mutate(label_text = paste0("Individuals = ", n_individuals, "\nStudies = ", n_studies))
+
+# 2. Plot with text overlays
+p5_new <- ggplot(dat_rt_lrg_plot, aes(x = Route_type)) +
+  # Use fill mapping inside geom_bar so it only applies to the bars, not the text labels
+  geom_bar(aes(fill = factor(severity_rank)), position = "fill", width = 0.7) + 
   
-# Combine combined plot and legend using plot_grid()
-plot_grid(combo_plot, legend, ncol=1, rel_heights = c(1, .05))
-ggsave("../plots_tables/Inoculation_routes.pdf", height=6, width=6)
-ggsave("../plots_tables/Inoculation_routes.png", height=6, width=6)
+  # Add the text layer using our pre-calculated label data frame
+  geom_text(
+    data = bar_labels,
+    aes(x = Route_type, y = 1.02, label = label_text),
+    inherit.aes = FALSE,   # Prevents it from looking for severity_rank in bar_labels
+    vjust = 0,             # Aligns text so it sits on top of the y-coordinate
+    size = 3,              # Adjust text size here
+    lineheight = 0.85      # Tightens the vertical space between the N and S lines
+  ) +
+  
+  facet_wrap(~ Host_order) +
+  
+  # Expand the upper limit of the Y axis slightly (to 1.1) so the text labels don't get cut off
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1.1), breaks = seq(0, 1, 0.25)) +
+  
+  scale_fill_brewer(palette = "YlOrRd") + 
+  
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text = element_text(size = 12, face = "bold"),
+    panel.spacing = unit(1.5, "lines")
+  ) +
+  labs(
+    y = "Proportion of Individuals",
+    x = "Inoculation Route",
+    fill = "Severity Rank"
+  )
+
+# Render the plot
+p5_new
+
+ggsave("../plots_tables/severity_by_inoculationroute.pdf", p5_new, width=15, height=7)
+
+# # saving as dat
+# dat <- dat_rt_lrg_plot
+
+
+
+# setting new harmonized inoculation routes as main dat
+dat <- dat_rt_lrg
 
 
 # adjusting for body mass
@@ -269,10 +354,10 @@ ggsave("../plots_tables/Dose_by_viral_order.png", p4, height=4, width=12)
 dose_dat <- select(dat, PaperID, IndividualID, Virus_ICTV, Host_Upham,
 					adult_mass_g, Dose_amount, Dose_unit, Dose_mass, Route_type) %>% unique()
 
-
 dim(dose_dat)#2885
 
-write.csv(dose_dat, "../clean_data/dose_data.csv", row.names=FALSE)
+# updating to reflect inoculation data is in this
+write.csv(dose_dat, "../clean_data/dose_inoculation_data.csv", row.names=FALSE)
 
 
 # modelling dose differences between bats and rodents
@@ -280,13 +365,6 @@ write.csv(dose_dat, "../clean_data/dose_data.csv", row.names=FALSE)
 bayesplot_theme_set(theme_bw())
 
 dat_dose <- dose_dat
-
-# dat_dose <- left_join(dat, dose_dat)
-# dat_dose <- dat_dose[dat_dose$Susceptible_YN==1,]
-# dat_dose <- dat_dose[!is.na(dat_dose$Susceptible_YN),]
-
-# # log transform dose/g
-# dat_dose <- dat_dose %>% group_by(Dose_unit) %>% mutate(Dose_mass = log(Dose_mass))
 
 dat_dose$Host_name <- dat_dose$Host_Upham
 dat_dose$Virus_name <- dat_dose$Virus_ICTV
@@ -313,7 +391,7 @@ vtax <- as.data.frame(unclass(vtax), stringsAsFactors=TRUE)
 frm <- ~superkingdom/realm/kingdom/phylum/class/order/family/genus/Virus_ICTV
 vtree <- as.phylo(frm, data = vtax, collapse=FALSE)
 vtree$edge.length <- rep(1, nrow(vtree$edge))
-http://www.banningeyre.com/
+
 # include only viruses in subset data (e.g. after removing mole)
 vtree <- drop.tip(vtree, setdiff(vtree$tip.label, dat$Virus_ICTV))
 # plot(vtree)
@@ -326,33 +404,6 @@ virus_cov <- vcv(vtree, corr=TRUE)
 # adding host_order
 
 dat_dose <- left_join(dat_dose, select(dat, c(Host_Upham, Host_order), ))
-
-names(dat_dose)
-
-hist(log(dat_dose$Dose_mass))
-
-# if (!file.exists("../fit_models/dose_model.rds")) {
-
-  dose_m1 <- brm(log(Dose_mass) ~ Host_order +
-  					  (1|Dose_unit) +  (1|Route_type), # + 
-                      # (1|Host_name) + (1|Virus_name) +  
-                      # (1|Host_Upham) + (1|Virus_ICTV), 
-    data=dat_dose, family=gaussian(), 
-    iter=4000, thin=1, 
-    # cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.95, max_treedepth=10), cores=4, 
-    save_pars=save_pars(all=TRUE))
-
-  saveRDS(dose_m1, "../fit_models/dose_model.rds")
-
-# } else { dose_m1 <- readRDS("../fit_models/dose_model.rds")}
-
-
-summary(dose_m1)
-
-
-
-
 
 
 

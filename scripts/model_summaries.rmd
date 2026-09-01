@@ -171,7 +171,7 @@ s_mort <- readRDS("../fit_models/spec_mort_nolys.rds")
 s_sev <- readRDS("../fit_models/spec_severity_nolys.rds")
 
 i_dis <- readRDS("../fit_models/indiv_disease_nolys.rds")
-i_mort <- readRDS("../fit_models/indiv_mort_nolys.rds")
+i_mort <- readRDS("../fit_models/indiv_mortality_nolys.rds")
 i_sev <- readRDS("../fit_models/indiv_severity_nolys.rds")
 
 cp <- six_panel_forest_plot(s_dis, i_dis, s_mort, i_mort, s_sev, i_sev)
@@ -212,7 +212,7 @@ s_mort <- readRDS("../fit_models/spec_mort_homoHosts.rds")
 s_sev <- readRDS("../fit_models/spec_severity_homoHosts.rds")
 
 i_dis <- readRDS("../fit_models/indiv_disease_homoHosts.rds")
-i_mort <- readRDS("../fit_models/indiv_mort_homoHosts.rds")
+i_mort <- readRDS("../fit_models/indiv_mortality_homoHosts.rds")
 i_sev <- readRDS("../fit_models/indiv_severity_homoHosts.rds")
 
 cp <- six_panel_forest_plot(s_dis, i_dis, s_mort, i_mort, s_sev, i_sev)
@@ -232,7 +232,7 @@ s_mort <- readRDS("../fit_models/spec_mort_heteroHosts.rds")
 s_sev <- readRDS("../fit_models/spec_severity_heteroHosts.rds")
 
 i_dis <- readRDS("../fit_models/indiv_disease_heteroHosts.rds")
-i_mort <- readRDS("../fit_models/indiv_mort_heteroHosts.rds")
+i_mort <- readRDS("../fit_models/indiv_mortality_heteroHosts.rds")
 i_sev <- readRDS("../fit_models/indiv_severity_heteroHosts.rds")
 
 cp <- six_panel_forest_plot(s_dis, i_dis, s_mort, i_mort, s_sev, i_sev)
@@ -250,7 +250,7 @@ ggsave("../plots_tables/combined_species_individual_intervals_heteroHosts.pdf", 
 ```{r plots_dose_amount, fig.width=10}
   
 i_dis <- readRDS("../fit_models/indiv_disease_dose_amount.rds")
-i_mort <- readRDS("../fit_models/indiv_mort_dose_amount.rds")
+i_mort <- readRDS("../fit_models/indiv_mortality_dose_amount.rds")
 i_sev <- readRDS("../fit_models/indiv_severity_dose_amount.rds")
 
 ## Joint plot
@@ -273,7 +273,7 @@ ggsave("../plots_tables/combined_individual_intervals_dose_amount.pdf", cp, widt
 ```{r plots_dose_amount_mass, fig.width=10}
   
 i_dis <- readRDS("../fit_models/indiv_disease_dose_amount_mass.rds")
-i_mort <- readRDS("../fit_models/indiv_mort_dose_amount_mass.rds")
+i_mort <- readRDS("../fit_models/indiv_mortality_dose_amount_mass.rds")
 i_sev <- readRDS("../fit_models/indiv_severity_dose_amount_mass.rds")
 
 ## Joint plot
@@ -297,7 +297,7 @@ ggsave("../plots_tables/combined_individual_intervals_dose_amount_mass.pdf", cp,
 ```{r plots_both_orders, fig.width=10}
   
 i_dis <- readRDS("../fit_models/indiv_disease_viruses_both_orders.rds")
-i_mort <- readRDS("../fit_models/indiv_mort_viruses_both_orders.rds")
+i_mort <- readRDS("../fit_models/indiv_mortality_viruses_both_orders.rds")
 i_sev <- readRDS("../fit_models/indiv_severity_viruses_both_orders.rds")
 
 ## Joint plot
@@ -320,7 +320,7 @@ ggsave("../plots_tables/combined_individual_intervals_viruses_both_orders.pdf", 
 ```{r plots_no_brain, fig.width=10}
   
 i_dis <- readRDS("../fit_models/indiv_disease_no_brain.rds")
-i_mort <- readRDS("../fit_models/indiv_mort_no_brain.rds")
+i_mort <- readRDS("../fit_models/indiv_mortality_no_brain.rds")
 i_sev <- readRDS("../fit_models/indiv_severity_no_brain.rds")
 
 ## Joint plot

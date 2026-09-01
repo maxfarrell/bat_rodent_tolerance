@@ -122,7 +122,7 @@ vtree <- drop.tip(vtree, setdiff(vtree$tip.label, dat$Virus_ICTV))
 
 
 # add host weight and cleaned dose and inoculation route data
-dose_dat <- read.csv("../clean_data/dose_data.csv")
+dose_dat <- read.csv("../clean_data/dose_inoculation_data.csv")
 dat <- select(dat, -c(Dose_amount, Dose_unit))
 dat <- dplyr::left_join(dat, dose_dat)
 
@@ -847,7 +847,7 @@ if (!file.exists("../fit_models/spec_severity_resMatch_alone.rds")) {
     data=spec, family=cumulative(probit), 
     prior=custom_prior,
     iter=5000, thin=1, cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.97, max_treedepth=12), cores=4, 
+    control=list(adapt_delta=0.99, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
   saveRDS(spec_severity_resMatch_alone, "../fit_models/spec_severity_resMatch_alone.rds")
@@ -1514,7 +1514,7 @@ if (!file.exists("../fit_models/spec_severity_nolys.rds")) {
     data=spec_nolys, family=cumulative(probit), 
     prior=custom_prior,
     iter=5000, thin=1, cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.90, max_treedepth=12), cores=4, 
+    control=list(adapt_delta=0.98, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
   saveRDS(spec_severity_nolys, "../fit_models/spec_severity_nolys.rds")
@@ -1973,7 +1973,7 @@ ggsave("../plots_tables/dose_g_comboplot.pdf", width=8, height=3)
 
 # modelling daw dose differences
 
-plot(dat_dose$Dose_amount, dat_dose$adult_mass_g)
+# plot(dat_dose$Dose_amount, dat_dose$adult_mass_g)
 
 if (!file.exists("../fit_models/dose_model_m2.rds")) {
 
@@ -2192,7 +2192,7 @@ if (!file.exists("../fit_models/indiv_disease_full.rds")) {
     data=dat_dis, family=bernoulli(link = "logit"), 
     prior=custom_prior,
     iter=5000, thin=1, cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.95, max_treedepth=12), cores=4, 
+    control=list(adapt_delta=0.98, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
   saveRDS(disease_full, "../fit_models/indiv_disease_full.rds")
@@ -2268,7 +2268,7 @@ if (!file.exists("../fit_models/indiv_mort_full.rds")) {
     prior=custom_prior,
     iter=5000, thin=1, 
     cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.95, max_treedepth=12), cores=4, 
+    control=list(adapt_delta=0.98, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
   saveRDS(mort_full, "../fit_models/indiv_mort_full.rds")
@@ -2537,7 +2537,7 @@ if (!file.exists("../fit_models/indiv_disease_resMatch_alone.rds")) {
     data=dat_dis, family=bernoulli(link = "logit"), 
     prior=custom_prior,
     iter=5000, thin=1, cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.95, max_treedepth=12), cores=4, 
+    control=list(adapt_delta=0.98, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
   saveRDS(disease_resMatch_alone, "../fit_models/indiv_disease_resMatch_alone.rds")
@@ -2711,7 +2711,7 @@ if (!file.exists("../fit_models/indiv_disease_resMatch.rds")) {
     data=dat_dis, family=bernoulli(link = "logit"), 
     prior=custom_prior,
     iter=5000, thin=1, cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.95, max_treedepth=12), cores=4, 
+    control=list(adapt_delta=0.98, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
   saveRDS(disease_resMatch, "../fit_models/indiv_disease_resMatch.rds")
@@ -2905,10 +2905,20 @@ param_tab(model)
 # test <- plot_conditional_effects(model, "Conditional probabilty of disease presence")
 # test
 
-ggsave("../plots_tables/disease_resMatch_inter_cond_effs.pdf", width=6.5, height=5)
+# ggsave("../plots_tables/disease_resMatch_inter_cond_effs.pdf", width=6.5, height=5)
 
 
-# ggsave("../plots_tables/individual_level_disease_resMatch_inter_comboplot.pdf", width=8, height=3)
+p1 <- cond_eff_plot(model) + scale_y_continuous(lim=c(-15,15)) + 
+      ylab("Conditional log-odds of disease") + xlab("") + 
+      theme(axis.title=element_text(size=9),axis.text.x=element_text(size=10)) + 
+      scale_x_discrete(limits = c("Chiroptera","Rodentia"))
+
+ar1 <- intervals_plot(model)
+
+plot_grid(p1, ar1, align="h", rel_widths =c(0.7,1))
+
+
+ggsave("../plots_tables/individual_level_disease_resMatch_inter_comboplot.pdf", width=8, height=3)
 
 ```
 
@@ -3236,7 +3246,7 @@ if (!file.exists("../fit_models/indiv_disease_nolys.rds")) {
     data=dat_dis_nolys, family=bernoulli(link = "logit"), 
     prior=custom_prior,
     iter=5000, thin=1, cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.9, max_treedepth=12), cores=4, 
+    control=list(adapt_delta=0.95, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
   saveRDS(disease_nolys, "../fit_models/indiv_disease_nolys.rds")
@@ -3277,7 +3287,7 @@ Sample size: `r nrow(model$data)`
 lyssaviruses <- viruses$Virus_ICTV[viruses$genus=="Lyssavirus"] %>% unique()
 dat_mort_nolys <- dat_mort[!dat_mort$Virus_ICTV%in%lyssaviruses,]
 
-if (!file.exists("../fit_models/indiv_mort_nolys.rds")) {
+if (!file.exists("../fit_models/indiv_mortality_nolys.rds")) {
 
   mort_nolys <- brm(Mortality_YN ~ Host_order + 
                       ses_pd + EvoIso +  
@@ -3292,9 +3302,9 @@ if (!file.exists("../fit_models/indiv_mort_nolys.rds")) {
     control=list(adapt_delta=0.90, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
-  saveRDS(mort_nolys, "../fit_models/indiv_mort_nolys.rds")
+  saveRDS(mort_nolys, "../fit_models/indiv_mortality_nolys.rds")
 
-} else { mort_nolys <- readRDS("../fit_models/indiv_mort_nolys.rds")}
+} else { mort_nolys <- readRDS("../fit_models/indiv_mortality_nolys.rds")}
 
 model <- mort_nolys
 # summary(model, prob=0.9)
@@ -3342,7 +3352,7 @@ if (!file.exists("../fit_models/indiv_severity_nolys.rds")) {
     data=dat_severity_nolys, family=cumulative(probit),  
     prior=custom_prior,
     iter=5000, thin=1, cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.90, max_treedepth=12), cores=4, 
+    control=list(adapt_delta=0.98, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
   saveRDS(severity_nolys, "../fit_models/indiv_severity_nolys.rds")
@@ -3453,7 +3463,7 @@ Sample size: `r nrow(model$data)`
 
 dat_mort_heteros <- dat_mort[dat_mort$Reservoir_match%in%0,]
 
-if (!file.exists("../fit_models/indiv_mort_heteroHosts.rds")) {
+if (!file.exists("../fit_models/indiv_mortality_heteroHosts.rds")) {
 
   mort_heteros <- brm(Mortality_YN ~ Host_order  +
                       ses_pd + EvoIso +  
@@ -3469,9 +3479,9 @@ if (!file.exists("../fit_models/indiv_mort_heteroHosts.rds")) {
     control=list(adapt_delta=0.95, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
-  saveRDS(mort_heteros, "../fit_models/indiv_mort_heteroHosts.rds")
+  saveRDS(mort_heteros, "../fit_models/indiv_mortality_heteroHosts.rds")
 
-} else { mort_heteros <- readRDS("../fit_models/indiv_mort_heteroHosts.rds")}
+} else { mort_heteros <- readRDS("../fit_models/indiv_mortality_heteroHosts.rds")}
 
 model <- mort_heteros
 # summary(model, prob=0.9)
@@ -3592,7 +3602,7 @@ if (!file.exists("../fit_models/indiv_disease_homoHosts.rds")) {
     data=dat_dis_homos, family=bernoulli(link = "logit"), 
     prior=custom_prior,
     iter=5000, thin=1, cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.95, max_treedepth=12), cores=4, 
+    control=list(adapt_delta=0.98, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
   saveRDS(disease_homos, "../fit_models/indiv_disease_homoHosts.rds")
@@ -3632,7 +3642,7 @@ Sample size: `r nrow(model$data)`
 
 dat_mort_homos <- dat_mort[dat_mort$Reservoir_match%in%1,]
 
-if (!file.exists("../fit_models/indiv_mort_homoHosts.rds")) {
+if (!file.exists("../fit_models/indiv_mortality_homoHosts.rds")) {
 
   mort_homos <- brm(Mortality_YN ~ Host_order  +
                       ses_pd + EvoIso +  
@@ -3648,9 +3658,9 @@ if (!file.exists("../fit_models/indiv_mort_homoHosts.rds")) {
     control=list(adapt_delta=0.95, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
-  saveRDS(mort_homos, "../fit_models/indiv_mort_homoHosts.rds")
+  saveRDS(mort_homos, "../fit_models/indiv_mortality_homoHosts.rds")
 
-} else { mort_homos <- readRDS("../fit_models/indiv_mort_homoHosts.rds")}
+} else { mort_homos <- readRDS("../fit_models/indiv_mortality_homoHosts.rds")}
 
 model <- mort_homos
 # summary(model, prob=0.9)
@@ -3799,7 +3809,7 @@ if (!file.exists("../fit_models/indiv_disease_dose_amount.rds")) {
     data=dat_dis, family=bernoulli(link = "logit"), 
     prior=custom_prior,
     iter=5000, thin=1, cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.95, max_treedepth=12), cores=4, 
+    control=list(adapt_delta=0.98, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
   saveRDS(disease_dose_amount, "../fit_models/indiv_disease_dose_amount.rds")
@@ -3838,7 +3848,7 @@ Sample size: `r nrow(model$data)`
 
 ```{r indiv_mortality_dose_amount, echo=T, eval=T}
 
-if (!file.exists("../fit_models/indiv_mort_dose_amount.rds")) {
+if (!file.exists("../fit_models/indiv_mortality_dose_amount.rds")) {
 
   mort_dose_amount <- brm(Mortality_YN ~ Host_order +
                       ses_pd + EvoIso + 
@@ -3854,9 +3864,9 @@ if (!file.exists("../fit_models/indiv_mort_dose_amount.rds")) {
     control=list(adapt_delta=0.95, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
-  saveRDS(mort_dose_amount, "../fit_models/indiv_mort_dose_amount.rds")
+  saveRDS(mort_dose_amount, "../fit_models/indiv_mortality_dose_amount.rds")
 
-} else { mort_dose_amount <- readRDS("../fit_models/indiv_mort_dose_amount.rds")}
+} else { mort_dose_amount <- readRDS("../fit_models/indiv_mortality_dose_amount.rds")}
 
 model <- mort_dose_amount
 # summary(model, prob=0.9)
@@ -3970,7 +3980,7 @@ if (!file.exists("../fit_models/indiv_disease_dose_amount_mass.rds")) {
     data=dat_dis, family=bernoulli(link = "logit"), 
     prior=custom_prior,
     iter=5000, thin=1, cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.95, max_treedepth=12), cores=4, 
+    control=list(adapt_delta=0.98, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
   saveRDS(disease_dose_amount_mass, "../fit_models/indiv_disease_dose_amount_mass.rds")
@@ -4010,7 +4020,7 @@ Sample size: `r nrow(model$data)`
 
 ```{r indiv_mortality_dose_amount_mass, echo=T, eval=T}
 
-if (!file.exists("../fit_models/indiv_mort_dose_amount_mass.rds")) {
+if (!file.exists("../fit_models/indiv_mortality_dose_amount_mass.rds")) {
 
   mort_dose_amount_mass <- brm(Mortality_YN ~ Host_order +
                       ses_pd + EvoIso + adult_mass_g +
@@ -4023,12 +4033,12 @@ if (!file.exists("../fit_models/indiv_mort_dose_amount_mass.rds")) {
     prior=custom_prior,
     iter=5000, thin=1, 
     cov_ranef = list(Host_Upham = host_cov, Virus_ICTV=virus_cov),
-    control=list(adapt_delta=0.95, max_treedepth=12), cores=4, 
+    control=list(adapt_delta=0.98, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
-  saveRDS(mort_dose_amount_mass, "../fit_models/indiv_mort_dose_amount_mass.rds")
+  saveRDS(mort_dose_amount_mass, "../fit_models/indiv_mortality_dose_amount_mass.rds")
 
-} else { mort_dose_amount_mass <- readRDS("../fit_models/indiv_mort_dose_amount_mass.rds")}
+} else { mort_dose_amount_mass <- readRDS("../fit_models/indiv_mortality_dose_amount_mass.rds")}
 
 model <- mort_dose_amount_mass
 # summary(model, prob=0.9)
@@ -4190,7 +4200,7 @@ Sample size: `r nrow(model$data)`
 
 dat_mort_nobrain <- dat_mort %>% filter(Route_type!="Injection (brain)")
 
-if (!file.exists("../fit_models/indiv_mort_no_brain.rds")) {
+if (!file.exists("../fit_models/indiv_mortality_no_brain.rds")) {
 
   mort_no_brain <- brm(Mortality_YN ~ Host_order + 
                       ses_pd + EvoIso + 
@@ -4205,9 +4215,9 @@ if (!file.exists("../fit_models/indiv_mort_no_brain.rds")) {
     control=list(adapt_delta=0.99, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
-  saveRDS(mort_no_brain, "../fit_models/indiv_mort_no_brain.rds")
+  saveRDS(mort_no_brain, "../fit_models/indiv_mortality_no_brain.rds")
 
-} else { mort_no_brain <- readRDS("../fit_models/indiv_mort_no_brain.rds")}
+} else { mort_no_brain <- readRDS("../fit_models/indiv_mortality_no_brain.rds")}
 
 model <- mort_no_brain
 # summary(model, prob=0.9)
@@ -4403,7 +4413,7 @@ Sample size: `r nrow(model$data)`
 
 ```{r mortality_viruses_both_orders, echo=T, eval=T}
 
-if (!file.exists("../fit_models/indiv_mort_viruses_both_orders.rds")) {
+if (!file.exists("../fit_models/indiv_mortality_viruses_both_orders.rds")) {
 
   mort_viruses_both_orders <- brm(Mortality_YN ~ Host_order + 
                       ses_pd + EvoIso + 
@@ -4418,9 +4428,9 @@ if (!file.exists("../fit_models/indiv_mort_viruses_both_orders.rds")) {
     control=list(adapt_delta=0.99, max_treedepth=12), cores=4, 
     save_pars=save_pars(all=TRUE))
 
-  saveRDS(mort_viruses_both_orders, "../fit_models/indiv_mort_viruses_both_orders.rds")
+  saveRDS(mort_viruses_both_orders, "../fit_models/indiv_mortality_viruses_both_orders.rds")
 
-} else { mort_viruses_both_orders <- readRDS("../fit_models/indiv_mort_viruses_both_orders.rds")}
+} else { mort_viruses_both_orders <- readRDS("../fit_models/indiv_mortality_viruses_both_orders.rds")}
 
 model <- mort_viruses_both_orders
 # summary(model, prob=0.9)
@@ -4537,6 +4547,7 @@ vtraits <- select(virus_traits, Virus_ICTV, Reservoir, CFR_avg)
 
 
 dat_cfr <- left_join(dat_cfr, unique(select(vtraits, c(Virus_ICTV, CFR_avg))))
+
 
 dat_cfr <- filter(dat_cfr, !is.na(CFR_avg))
 
@@ -4823,7 +4834,7 @@ dat_cfr$Host_name <- dat_cfr$Host_Upham
 
 if (!file.exists("../fit_models/cfr_base1.rds")) {
 
-    cfr_base1 <- brm(CFR_avg/100 ~ Host_order+ 
+    cfr_base1 <- brm(CFR_avg/100 ~ Host_order + 
                           (1|PaperID), 
         data=dat_cfr, family=zero_one_inflated_beta(),  
         prior=custom_prior,
@@ -4860,7 +4871,7 @@ if (!file.exists("../fit_models/cfr_base2.rds")) {
         data=dat_cfr, family=zero_one_inflated_beta(),  
         prior=custom_prior,
         iter=5000, thin=1, cov_ranef = list(Virus_ICTV=virus_cov),
-        control=list(adapt_delta=0.90, max_treedepth=12), cores=4, 
+        control=list(adapt_delta=0.98, max_treedepth=12), cores=4, 
         save_pars=save_pars(all=TRUE))
 
     saveRDS(cfr_base2, "../fit_models/cfr_base2.rds")
@@ -4947,6 +4958,7 @@ if (!file.exists("../fit_models/cfr_het1.rds")) {
 
 # cfr_het1
 
+
 # pp_check(cfr_het1, ndraws=300)
 # cond_eff_plot(cfr_het1)
 # param_tab(cfr_het1)
@@ -4968,7 +4980,7 @@ if (!file.exists("../fit_models/cfr_het2.rds")) {
         data=dat_cfr_het, family=zero_one_inflated_beta(),  
         prior=custom_prior,
         iter=5000, thin=1, cov_ranef = list(Virus_ICTV=virus_cov),
-        control=list(adapt_delta=0.90, max_treedepth=16), cores=4, 
+        control=list(adapt_delta=0.99, max_treedepth=16), cores=4, 
         save_pars=save_pars(all=TRUE))
 
     saveRDS(cfr_het2, "../fit_models/cfr_het2.rds")
